@@ -1,0 +1,19 @@
+#taglist {
+    position:absolute;
+    display: inline-block;
+    right: 0;
+    z-index: 500;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/White_square_50%25_transparency.svg');
+    bottom: 0;
+    padding: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.cat {
+    margin-left: -1em;
+    margin-right: 1em;
+}
+
