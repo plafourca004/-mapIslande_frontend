@@ -59,7 +59,7 @@ function TagList(props) {
             })}<br />
             <li>
                 <input type="checkbox" checked={checkAll} onChange={() => handleCheckAll()} />
-                <lab>{checkAll ? "Déchocher" : "Cocher"} tout</lab>
+                <label>{checkAll ? "Déchocher" : "Cocher"} tout</label>
             </li>
         </ul>
     </div>

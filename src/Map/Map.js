@@ -21,11 +21,11 @@ function Map() {
   ]
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/v1/points")
+    fetch("http://localhost:3001/api/v2/points")
     .then(res => res.json())
     .then((res) => setMarkers(res))
 
-    fetch("http://localhost:3001/api/v1/tags")
+    fetch("http://localhost:3001/api/v2/tags")
     .then(res => res.json())
     .then((res) => {
       setTags(res)
@@ -45,7 +45,7 @@ function Map() {
   const markersComponents = markers.map((marker, key) => {
     if(new Date(marker.date).getTime() > range[0] && new Date(marker.date).getTime() < range[1]) {
       if(categoriesActivees.includes(marker.tag) || tags.length === 0) {
-        return <MarkerPoint key={marker.id} lat={marker.lat} lng={marker.lng} date={marker.date} notes={marker.notes} filename={marker.filename} />
+        return <MarkerPoint key={marker.id} lat={marker.lat} lng={marker.lng} date={marker.date} notes={marker.notes} link={marker.link} />
       }
     }  
     return null

@@ -14,7 +14,7 @@ function MarkerPoint(props) {
         <Popup maxWidth="100%">
           <h1>{props.date}</h1>
           <Zoom>
-            <img src={"http://localhost:3001/api/v1/image/" + props.filename} alt="sick pic" className="marker-picture" />
+            <img src={props.link} alt="sick pic" className="marker-picture" />
           </Zoom>
           <p>{props.notes}</p>
         </Popup>
