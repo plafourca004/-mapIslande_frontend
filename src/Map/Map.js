@@ -21,11 +21,11 @@ function Map() {
   ]
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/v2/points")
+    fetch("https://back-mapislande.herokuapp.com/api/v2/points")
     .then(res => res.json())
     .then((res) => setMarkers(res))
 
-    fetch("http://localhost:3001/api/v2/tags")
+    fetch("https://back-mapislande.herokuapp.com/api/v2/tags")
     .then(res => res.json())
     .then((res) => {
       setTags(res)
